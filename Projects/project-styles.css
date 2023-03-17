@@ -1,0 +1,184 @@
+#project-container {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 17rem 10rem; /*48px, 272px, 160px, 272px*/
+}
+
+.description-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.project-header {
+    max-width: 540px;
+    font-family: "IBM Plex Sans", sans-serif;
+    color: hsla(186, 51%, 7%, 1);
+}
+
+.project-header h1 {
+    font-size: 2.5rem; /*40px*/
+    font-weight: 300;
+    margin-bottom: 0.5rem;
+}
+
+.project-header h3,
+.project-tools h3,
+.project-content h3 {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+    line-height: 26px;
+}
+
+.project-header p,
+.project-content p {
+    line-height: 24px;
+}
+
+.project-tools {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+}
+
+.project-tools button.button-large {
+    margin-top: 2.5rem;
+}
+
+/****************************** PROJECT CONTENT ************************************************/
+.project-content {
+    font-family: "IBM Plex Sans", sans-serif;
+    color: hsla(186, 51%, 7%, 1);
+    margin-top: 6.25rem;
+}
+
+.project-content span a {
+    font-size: 1rem;
+    font-weight: 400;
+    color: hsla(178, 75%, 35%, 1);
+    display: inline-block;
+    padding: 0;
+}
+
+.project-content p {
+    margin-bottom: 20px;
+}
+
+.project-content.theme {
+    display: flex;
+}
+
+.theme-content {
+    width: 35%;
+    margin-right: 5rem;
+}
+
+.project-content.datasource,
+.project-content.responsive,
+.project-content.specs,
+.project-content.outro {
+    width: 75%;
+    margin-bottom: 1rem;
+}
+/****************************** PROJECT IMAGES & GIF ************************************************/
+.images-project-overview {
+    display: flex;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.image-project-overview button {
+    width: 30%;
+    margin: 0 auto;
+}
+
+.images-project-overview.themes img {
+    width: 50%;
+}
+
+.images-project-overview.airbnb {
+    justify-content: center;
+}
+
+.images-project-overview.airbnb img {
+    width: 50%;
+}
+
+.images-project-overview.mobile {
+    justify-content: center;
+}
+
+.images-project-overview.mobile img {
+    width: 500px;
+}
+.images-project-overview.snippet {
+    justify-content: center;
+    max-height: 500px;
+}
+
+.image-project-animation {
+    margin: 30px auto 0;
+    text-align: center;
+}
+
+.image-project-animation button {
+    margin-top: 3rem;
+}
+
+.image-project-specs img {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.image-theme {
+    align-self: flex-start;
+    width: 550px;
+}
+
+/************************************** MOBILE LAYOUT *******************************/
+@media (max-width: 760px) {
+    #project-container {
+        margin: 0;
+        padding: 1rem;
+    }
+
+    .description-container {
+        flex-direction: column;
+    }
+
+    .images-project-overview {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-header h1 {
+        font-size: 2rem;
+    }
+
+    .project-tools {
+        padding-top: 30px;
+    }
+
+    .project-content.datasource,
+    .project-content.responsive,
+    .project-content.specs,
+    .project-content.outro {
+        width: auto;
+        margin-bottom: 0;
+    }
+
+    .project-content.theme {
+        flex-direction: column;
+    }
+
+    .theme-content {
+        width: auto;
+        margin: 0;
+    }
+
+    .image-theme {
+        width: auto;
+    }
+}

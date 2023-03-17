@@ -1,0 +1,491 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol {
+  margin: 0;
+}
+
+body {
+  font-family: "IBM Plex Sans", sans-serif, "IBM Plex Mono", monospace;
+  min-height: 100vh;
+  padding-top: 100px;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: hsla(216, 7%, 56%, 1);
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.25rem; /*20px*/
+  display: block;
+  padding: 12px;
+}
+
+a:hover {
+  color: hsla(183, 87%, 15%, 1);
+}
+
+button {
+  cursor: pointer;
+}
+
+button.button-small {
+  border: 1px solid hsla(183, 87%, 15%, 1);
+  border-radius: 64px;
+  background-color: transparent;
+  align-self: flex-start;
+}
+
+button.button-small:hover {
+  background-color: hsla(180, 73%, 74%, 1);
+}
+
+button.button-small:active {
+  background-color: hsla(179, 66%, 52%, 1);
+}
+
+button.button-small a {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 500;
+  font-size: 1rem;
+  /*adding padding to the anchor, not the button, to increase clickable area*/
+  padding: 8px 20px;
+  color: hsla(183, 87%, 15%, 1);
+}
+
+button.button-large {
+  background-color: hsl(180, 73%, 74%);
+  border: 1px solid #f2f4f8;
+  border-radius: 64px;
+}
+
+button.button-large.overview {
+  margin: 3rem auto 0;
+}
+
+button.button-large:hover {
+  border: 1px solid hsla(183, 87%, 15%, 1);
+  background-color: hsla(179, 66%, 52%, 1);
+}
+
+button.button-large:active {
+  background-color: hsla(178, 72%, 42%, 1);
+}
+
+button.button-large a {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 600;
+  font-size: 1.25rem;
+  /*adding padding to the anchor, not the button, to increase clickable area*/
+  padding: 11px 30px;
+  color: hsla(183, 87%, 15%, 1);
+}
+
+/***********************************NAVBAR*************************************************/
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 3rem 0;
+}
+
+.nav-links,
+.social-links {
+  display: flex;
+}
+
+.nav li {
+  margin-right: 1rem;
+  list-style: none;
+}
+
+.main-logo {
+  width: 100px;
+  height: 50px;
+}
+
+.nav-links {
+  margin-left: auto;
+}
+
+.toggle-button {
+  position: absolute;
+  top: 3rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0;
+  width: 30px;
+  height: 20px;
+}
+
+.toggle-button .bar {
+  width: 100%;
+  height: 3px;
+  background-color: hsla(183, 87%, 15%, 1);
+  border-radius: 10px;
+}
+
+.toggle-button a {
+  display: flex;
+  padding: 0;
+}
+
+ul.social-links {
+  padding: 0;
+}
+
+.social-icon {
+  width: 25px;
+  height: 25px;
+}
+
+.social-icon:hover {
+  fill: #32d5d1;
+}
+
+.current-tab {
+  padding-bottom: 0.5rem;
+  border-bottom: 5px solid #8beded;
+  color: hsla(183, 87%, 15%, 1);
+}
+
+/******************************* PROFILE - ABOUT ME *********************************/
+
+#profile {
+  display: flex;
+  margin-bottom: 3rem;
+  padding: 3rem;
+}
+
+.profile-description,
+.profile-image {
+  flex: 1;
+}
+
+.profile-description {
+  padding: 0 7.25rem; /*48px on right and 116px on left*/
+}
+
+.profile-description h1 {
+  font-size: 3rem; /*48px*/
+  font-weight: 300;
+  color: hsla(178, 75%, 35%, 1);
+  margin-bottom: 30px;
+}
+
+p.about-text {
+  color: hsla(186, 51%, 7%, 1);
+  font-size: 1rem;
+  line-height: 24px;
+  margin-bottom: 30px;
+}
+
+p.about-text.first {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 26px;
+}
+
+.profile-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-image img {
+  max-width: 427px;
+  max-height: 427px;
+}
+
+/*PROFILE - TOP TWO PROJECTS */
+.showcase {
+  background-color: #f2f4f8;
+}
+
+.showcase-project {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 50px 0 100px 0;
+}
+
+.showcase-project a {
+  padding: 0;
+}
+
+.top-project {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 540px;
+}
+
+.hero-card-image {
+  width: 540px;
+  height: 300px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.top-project .card-text {
+  margin-bottom: 30px;
+}
+
+.top-project button.button-small {
+  align-self: center;
+}
+
+.showcase-btn {
+  text-align: center;
+}
+
+.showcase-btn button {
+  margin-bottom: 100px;
+}
+
+/* PROJECT - CARDS */
+
+#project-cards {
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem;
+  gap: 5px;
+  margin-bottom: 200px;
+}
+
+.card {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: "IBM Plex Sans", sans-serif;
+  color: hsla(186, 51%, 7%, 1);
+}
+
+.card a {
+  padding: 0;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  margin: 1.25rem 0;
+}
+
+.card-text {
+  margin-bottom: 2rem;
+}
+
+.card-image {
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.tag {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 600;
+  padding: 1px 8px;
+  border-radius: 3px;
+  margin-right: 10px;
+}
+
+.html {
+  color: hsla(12, 100%, 33%, 1);
+  background-color: hsla(18, 100%, 91%, 1);
+}
+
+.css {
+  color: hsla(208, 92%, 23%, 1);
+  background-color: hsla(201, 92%, 95%, 1);
+}
+
+.js {
+  color: hsla(43, 100%, 25%, 1);
+  background-color: hsla(47, 100%, 90%, 1);
+}
+
+.api {
+  color: hsla(262, 58%, 37%, 1);
+  background-color: hsla(263, 100%, 97%, 1);
+}
+
+.react {
+  color: hsla(224, 88%, 35%, 1);
+  background-color: hsla(217, 100%, 96%, 1);
+}
+
+/****************************************RESUME PAGE******************************/
+
+.image-container {
+  padding: 3rem;
+  margin: 0 100px;
+}
+
+.img-resume {
+  border: 1px solid #e4e4e4;
+}
+
+.resume button {
+  display: block;
+  margin: 0 auto 10rem;
+}
+
+/*****************************************FOOTER***********************************/
+footer {
+  text-align: center;
+  padding-bottom: 50px;
+  color: hsla(183, 87%, 15%, 1);
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 400;
+  font-size: 0.625rem;
+}
+
+footer.home {
+  background-color: #f2f4f8;
+}
+
+/************************************** MOBILE LAYOUT *******************************/
+@media (max-width: 760px) {
+  /* HOME PAGE*/
+  #profile {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .profile-description {
+    padding: 1rem;
+    order: 2;
+  }
+
+  .profile-description button {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .profile-image {
+    order: 1;
+    transform: scale(65%);
+  }
+
+  .showcase-project {
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+  }
+
+  .top-project {
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  .top-project .card-text {
+    padding: 0 30px;
+    text-align: center;
+  }
+
+  /*NAVBAR*/
+
+  .main-logo {
+    transform: scale(75%);
+    margin-left: 0.5rem;
+  }
+
+  .toggle-button {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  ul.nav-links {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    margin-top: 1rem;
+    background-color: #f2f4f8;
+  }
+
+  ul.nav-links li {
+    margin: 0;
+  }
+
+  ul.nav-links li:hover {
+    background-color: #e0f9f9;
+  }
+
+  .nav-links a.current-tab {
+    border-bottom: none;
+    padding-bottom: 12px;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .social-links {
+    position: absolute;
+    right: 3rem;
+  }
+
+  /*PROJECTS PAGE*/
+
+  #project-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 6rem; /*96px betweeb each card*/
+  }
+
+  .card-text {
+    margin-bottom: 2rem;
+  }
+
+  /*RESUME PAGE*/
+  .resume .image-container {
+    padding: 1rem;
+    margin: 0;
+  }
+
+  .resume .image-container img {
+    width: 100%;
+  }
+}
